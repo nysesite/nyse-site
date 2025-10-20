@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NYSE — Streetwear Brand</title>
+  <meta name="description" content="NYSE — Trendy streetwear. Bold, clean, built for style." />
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --card:#131314;
+      --muted:#9aa0a6;
+      --accent:#ff5a7a; /* bold but not crazy */
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      --radius:14px;
+      --shadow: 0 8px 30px rgba(0,0,0,0.6);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#0b0b0b);color:#fff}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:36px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff8aa3);display:flex;align-items:center;justify-content:center;font-weight:700;color:#110;box-shadow:var(--shadow)}
+    .brand h1{font-size:20px;margin:0;letter-spacing:1px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);font-weight:600}
+    .cta{background:var(--accent);padding:10px 14px;border-radius:10px;color:#110;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:36px}
+    .hero-card{background:linear-gradient(180deg,var(--card),#111);padding:28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .eyebrow{color:var(--accent);font-weight:700;margin-bottom:8px}
+    .hero h2{font-size:40px;margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .hero .shop-btn{display:inline-block;padding:12px 16px;border-radius:12px;background:transparent;border:2px solid var(--accent);color:var(--accent);font-weight:700}
+    .hero-art{background:linear-gradient(135deg,#121214, #0e0e10);padding:12px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+    .hero-art img{width:100%;height:100%;max-height:420px;object-fit:cover;border-radius:10px}
+
+    /* Products */
+    .section{margin:40px 0}
+    .section h3{margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+    .product{background:var(--glass);padding:12px;border-radius:12px;backdrop-filter: blur(6px);transition:transform .18s}
+    .product:hover{transform:translateY(-6px)}
+    .product img{width:100%;height:260px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+    .price{font-weight:800;color:var(--accent)}
+    .pmeta{display:flex;justify-content:space-between;align-items:center}
+
+    /* About / Contact */
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:28px}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+    .gallery img{width:100%;height:100px;object-fit:cover;border-radius:8px}
+
+    /* Footer */
+    footer{color:var(--muted);padding:30px 0;text-align:center}
+
+    /* Responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.two-col{grid-template-columns:1fr}.hero h2{font-size:30px}.hero-art img{max-height:240px}.gallery{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:520px){.grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}.gallery{grid-template-columns:repeat(2,1fr)}.logo{width:44px;height:44px}.hero h2{font-size:24px}}
+
+    /* Tiny utilities */
+    .muted{color:var(--muted)}
+    .center{display:flex;align-items:center;justify-content:center}
+    .btn{padding:10px 14px;border-radius:10px;background:#111;border:1px solid rgba(255,255,255,0.04)}
+    .input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">NY</div>
+        <div>
+          <h1>NYSE</h1>
+          <div class="muted">Bold streetwear</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#lookbook">Lookbook</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#shop">Shop</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-card">
+          <div class="eyebrow">NEW DROP — FALL 2025</div>
+          <h2>Streetwear with edge. <br/> Clean lines. Loud statements.</h2>
+          <p>Limited runs, premium fabrics, designed to stand out without shouting. Free shipping over $75.</p>
+          <div style="display:flex;gap:12px">
+            <a class="hero-btn shop-btn" href="#shop">Shop the drop</a>
+            <a class="btn" href="#lookbook">See lookbook</a>
+          </div>
+        </div>
+
+        <div class="hero-art card center">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Hero image">
+        </div>
+      </section>
+
+      <section id="shop" class="section">
+        <h3>Shop</h3>
+        <div class="grid">
+          <!-- Product 1 -->
+          <div class="product card">
+            <img src="https://images.unsplash.com/photo-1520975911692-6a0f7f13ee50?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 1">
+            <div style="font-weight:700">Carbon Hoodie</div>
+            <div class="pmeta"><div class="muted">Heavyweight fleece</div><div class="price">$88</div></div>
+          </div>
+          <!-- Product 2 -->
+          <div class="product card">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 2">
+            <div style="font-weight:700">Neon Stitch Tee</div>
+            <div class="pmeta"><div class="muted">Oversized fit</div><div class="price">$34</div></div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product card">
+            <img src="https://images.unsplash.com/photo-1520975911692-6a0f7f13ee50?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 3">
+            <div style="font-weight:700">Core Track Pants</div>
+            <div class="pmeta"><div class="muted">Tapered silhouette</div><div class="price">$64</div></div>
+          </div>
+          <!-- Product 4 -->
+          <div class="product card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 4">
+            <div style="font-weight:700">Signature Cap</div>
+            <div class="pmeta"><div class="muted">5-panel</div><div class="price">$26</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h3>About</h3>
+        <div class="two-col">
+          <div class="card">
+            <p class="muted">NYSE is an independent streetwear label blending urban minimalism with statement accents. Founded in 2024, we focus on thoughtful cuts, bold color pops, and small-batch runs to keep pieces exclusive.</p>
+
+            <h4 style="margin-top:14px">Our approach</h4>
+            <ul class="muted">
+              <li>Small-batch production</li>
+              <li>Premium fabrics</li>
+              <li>Sustainable packaging</li>
+            </ul>
+          </div>
+
+          <aside class="card">
+            <h4>Contact</h4>
+            <p class="muted">For wholesale and collaborations, email <a href="mailto:hello@nysebrand.com">hello@nysebrand.com</a></p>
+            <div style="margin-top:12px">
+              <strong>Hours</strong>
+              <div class="muted">Mon–Fri 9:00–17:00</div>
+            </div>
+            <div style="margin-top:12px">
+              <strong>Location</strong>
+              <div class="muted">New York, NY</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="lookbook" class="section">
+        <h3>Lookbook</h3>
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1503342452485-86f7f5f2d7f3?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Look 1">
+          <img src="https://images.unsplash.com/photo-1520975921490-4b9a6a2c1f8a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Look 2">
+          <img src="https://images.unsplash.com/photo-1520975911692-6a0f7f13ee50?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Look 3">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Look 4">
+          <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Look 5">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Look 6">
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h3>Get in touch</h3>
+        <div class="two-col">
+          <div class="card">
+            <form id="contactForm" onsubmit="handleForm(event)">
+              <label class="muted">Your name</label>
+              <input class="input" name="name" required>
+              <label class="muted">Email</label>
+              <input class="input" type="email" name="email" required>
+              <label class="muted">Message</label>
+              <textarea class="input" name="message" rows="5" required></textarea>
+              <div style="margin-top:12px;display:flex;gap:10px">
+                <button class="btn" type="submit">Send</button>
+                <button class="btn" type="button" onclick="location.href='#shop'">Shop</button>
+              </div>
+            </form>
+            <div id="formMsg" style="margin-top:12px;color:var(--muted)"></div>
+          </div>
+
+          <aside class="card">
+            <h4>Newsletter</h4>
+            <p class="muted">Sign up for restock alerts and exclusive drops.</p>
+            <form id="newsletter" onsubmit="handleSubscribe(event)">
+              <input class="input" name="email" type="email" placeholder="you@email.com" required>
+              <div style="margin-top:10px"><button class="btn" type="submit">Subscribe</button></div>
+            </form>
+            <div id="newsMsg" style="margin-top:12px;color:var(--muted)"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="muted">© 2025 NYSE — Built with care. Designed for impact.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple form handlers (no server). Replace with Formspree / Netlify Forms / backend as needed.
+    function handleForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = f.name.value.trim();
+      const email = f.email.value.trim();
+      const msg = f.message.value.trim();
+      // Basic validation
+      if(!name||!email||!msg){document.getElementById('formMsg').textContent='Please fill all fields.';return}
+      // Fallback: open default mail client with content
+      const subject = encodeURIComponent('Contact from NYSE website: ' + name);
+      const body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg);
+      window.location.href = 'mailto:hello@nysebrand.com?subject='+subject+'&body='+body;
+      document.getElementById('formMsg').textContent='Opening your email client to send the message...';
+    }
+    function handleSubscribe(e){
+      e.preventDefault();
+      const email = e.target.email.value.trim();
+      if(!email){document.getElementById('newsMsg').textContent='Enter a valid email.';return}
+      // Simple confirmation — integrate real list provider later.
+      document.getElementById('newsMsg').textContent='Thanks! We\'ll email you when we restock.';
+      e.target.reset();
+    }
+
+    // Smooth scroll for nav
+    document.querySelectorAll('nav a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+      e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    }))
+  </script>
+</body>
+</html>
